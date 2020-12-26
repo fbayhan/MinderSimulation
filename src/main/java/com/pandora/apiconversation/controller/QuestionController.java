@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class QuestionController {
 
-    @GetMapping("/hello")
-    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return String.format("Hello %s! ", name);
+    @GetMapping("/gettest")
+    public String hello(@RequestParam(value = "value", defaultValue = "jesus") String name) {
+        return String.format(name);
     }
 
     @PostMapping("insertTest")
