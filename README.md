@@ -1,1 +1,2 @@
 # MinderSimulation
+Detayları yazacağım
