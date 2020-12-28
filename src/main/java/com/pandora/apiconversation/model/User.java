@@ -40,7 +40,7 @@ public class User extends GenericClass {
 
     @Override
     public String toString() {
-        return "User{" + 
+        return "User{" +
                 ", userName='" + userName + '\'' +
                 ", eMail='" + eMail + '\'' +
                 ", passWord='" + passWord + '\'' +
