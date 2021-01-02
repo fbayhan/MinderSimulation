@@ -27,7 +27,7 @@ public class UserService {
     user.setUserName(userDTO.getUserName());
     user.seteMail(userDTO.geteMail());
     user.setPassWord(userDTO.getPassWord());
-    user.setInsertDate(new Date());
+    user.setInsertTime(new Date());
     userRepository.save(user);
     return "ok";
 }

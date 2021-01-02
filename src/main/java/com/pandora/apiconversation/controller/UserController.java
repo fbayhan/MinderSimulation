@@ -12,15 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-UserService userService;
+    UserService userService;
 
 
     @PostMapping("newuser")
-    public String newUser(@RequestBody UserDTO userDTO){
+    public String newUser(@RequestBody UserDTO userDTO) {
         System.out.println(userDTO.toString());
 
-String result= userService.newUser(userDTO);
-return  result;
+        String result = userService.newUser(userDTO);
+        return result;
     }
+
 
 }

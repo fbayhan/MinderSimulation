@@ -11,8 +11,11 @@ public class User extends GenericClass {
     private String userName;
     private  String eMail;
     private String passWord;
+    private String name;
+    private String surName;
 
-
+    @OneToOne
+    private UserAttibutes userAttibutes;
 
     public String getUserName() {
         return userName;
@@ -38,12 +41,27 @@ public class User extends GenericClass {
         this.passWord = passWord;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                ", userName='" + userName + '\'' +
-                ", eMail='" + eMail + '\'' +
-                ", passWord='" + passWord + '\'' +
-                '}';
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurName() {
+        return surName;
+    }
+
+    public void setSurName(String surName) {
+        this.surName = surName;
+    }
+
+    public UserAttibutes getUserAttibutes() {
+        return userAttibutes;
+    }
+
+    public void setUserAttibutes(UserAttibutes userAttibutes) {
+        this.userAttibutes = userAttibutes;
     }
 }
