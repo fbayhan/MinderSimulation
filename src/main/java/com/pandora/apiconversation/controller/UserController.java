@@ -1,5 +1,8 @@
 package com.pandora.apiconversation.controller;
 
+import com.pandora.apiconversation.dto.ForgotPasswordDTO;
+import com.pandora.apiconversation.dto.LoginDTO;
+import com.pandora.apiconversation.dto.UserAttributesDTO;
 import com.pandora.apiconversation.dto.UserDTO;
 import com.pandora.apiconversation.repository.UserRepository;
 import com.pandora.apiconversation.service.UserService;
@@ -22,6 +25,22 @@ public class UserController {
         String result = userService.newUser(userDTO);
         return result;
     }
+
+    public String login(@RequestBody LoginDTO loginDTO){
+
+        return  "user controller worked";
+    }
+
+    public String addUserAttributes(UserAttributesDTO attributesDTO){
+        return  "user attributes added";
+    }
+    public  String editUserAttributes(UserAttributesDTO attributesDTO){
+        return  "edit user attributes worked";
+    }
+    public  String forgetPassword(ForgotPasswordDTO forgotPasswordDTO){
+        return  "forget passworddto worked";
+    }
+
 
 
 }
