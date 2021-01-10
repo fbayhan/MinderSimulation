@@ -6,6 +6,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="sex")
 public class Sex extends GenericClass {
+
+
     private String sexName;
 
     public String getSexName() {
