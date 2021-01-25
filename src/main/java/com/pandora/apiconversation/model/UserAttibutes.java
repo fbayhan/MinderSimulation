@@ -1,40 +1,23 @@
 package com.pandora.apiconversation.model;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
 @Entity
 @Table(name="userattributes")
 public class UserAttibutes extends GenericClass {
-    private int birthDate;
+    private Date birthDate;
 
-    @OneToMany(
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
+    @ManyToMany(
+            cascade = CascadeType.ALL
     )
     private List<Sex> lookingFor=new ArrayList<Sex>();
 
 
 
 
-    public int getBirthDate() {
-        return birthDate;
-    }
 
-    public void setBirthDate(int birthDate) {
-        this.birthDate = birthDate;
-    }
-
-
-
-
-
-    public List<Sex> getLookingFor() {
-        return lookingFor;
-    }
 }

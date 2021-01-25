@@ -1,5 +1,7 @@
 package com.pandora.apiconversation.model;
 
+import org.hibernate.annotations.ColumnDefault;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +9,15 @@ import java.util.List;
 @Entity
 @Table(name = "chatbots")
 public class ChatBots extends GenericClass {
+
     private String userName;
     private String name;
     private String surName;
+
+    @ColumnDefault("0")
+    private  int age;
+
+
     private int minAge;
     private int maxAge;
 

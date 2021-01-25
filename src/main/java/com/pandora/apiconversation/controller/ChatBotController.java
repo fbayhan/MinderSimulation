@@ -1,6 +1,7 @@
 package com.pandora.apiconversation.controller;
 
 import com.pandora.apiconversation.dto.ChatBotDTO;
+import com.pandora.apiconversation.dto.MatchDiceDTO;
 import com.pandora.apiconversation.model.ChatBots;
 import com.pandora.apiconversation.service.ChatBotService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,12 @@ public class ChatBotController {
         System.out.println(chatBotDTO.toString());
         ChatBots chatBots = chatBotService.newChatBots(chatBotDTO);
         return chatBots;
+    }
+
+    @PostMapping("matchdice")
+    public Boolean matchDice(@RequestBody MatchDiceDTO matchDiceDTO) {
+        System.out.println(matchDiceDTO.toString());
+
+        return chatBotService.matchDice(matchDiceDTO);
     }
 }
